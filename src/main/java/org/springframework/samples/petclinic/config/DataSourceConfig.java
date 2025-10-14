@@ -47,7 +47,7 @@ public class DataSourceConfig {
 
 	@Autowired
 	private Environment env;
-	
+
 	@Bean(name = "dataSource")
 	@Description("DataSource configuration for the tomcat jdbc connection pool")
 	@NotProfile("javaee")
@@ -72,5 +72,5 @@ public class DataSourceConfig {
 		dataSource.setJndiName(env.getProperty("java:comp/env/jdbc/petclinic"));
 		return dataSource;
 	}
-	
+
 }

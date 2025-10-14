@@ -40,13 +40,13 @@ import org.springframework.context.annotation.Import;
 import org.springframework.core.env.Environment;
 
 @Configuration
-@Import({BusinessConfig.class, ToolsConfig.class, SessionConfiguration.class})
+@Import({ BusinessConfig.class, ToolsConfig.class, SessionConfiguration.class })
 public class RootApplicationContextConfig {
-	
+
     private static final Logger LOG = LoggerFactory.getLogger(RootApplicationContextConfig.class);
 
     @Autowired
-    private Environment         env;
+    private Environment env;
 
     /**
      * Application custom initialization code.
@@ -66,6 +66,5 @@ public class RootApplicationContextConfig {
             }
         }
     }
-
 
 }
